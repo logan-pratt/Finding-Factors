@@ -74,13 +74,11 @@ class QuadraticViewController: UIViewController {
         let c = posNeg(Double(Int(thirdField.text!)!), thirdPlus, thirdMinus)
         let d = b*b - (4*a*c)
         var factor1 = 0.0, factor2 = 0.0
-        var factorString = "Factored: "
+        var factorString = "Factored: ", solutionString = "Solution(s): x={"
         
         if (d>=0) {
-            factor1 = (-1*b + sqrt(d)) / (2*a)
-            factor2 = (-1*b - sqrt(d)) / (2*a)
-            //factor1 = isAFactor(a, b, c, factor1)
-            //factor2 = isAFactor(a, b, c, factor2)
+            factor1 = ((-b + sqrt(d)) / (2*a)).roundToPlaces(2)
+            factor2 = ((-b - sqrt(d)) / (2*a)).roundToPlaces(2)
             
             
             if (factor1>=0) {
@@ -95,11 +93,13 @@ class QuadraticViewController: UIViewController {
             } else {
                 factorString += " (x + \(factor2 * -1))"
             }
-            
+        } else {
+            factorString=""
+            solutionString = "x = \(-b/2*a) ± √\(-d)i"
         }
         
         factorLabel.text = factorString
-        solutionLabel.text = "Solution(s): x={\(factor1), \(factor2))"
+        solutionLabel.text = solutionString
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -116,4 +116,12 @@ class QuadraticViewController: UIViewController {
     }
     */
     
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundToPlaces(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return round(self * divisor) / divisor
+    }
 }
