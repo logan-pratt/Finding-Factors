@@ -20,7 +20,7 @@ class AnsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var ansString = "The factors of \(num) are:\n\(factors)\n\nThe square root factors are:\n\(sRoots)\n\nThe cube root factors are:\n\(cRoots)"
+        let ansString = "The factors of \(num) are:\n\(factors)\n\nThe square root factors are:\n\(sRoots)\n\nThe cube root factors are:\n\(cRoots)"
         ansLabel.text = ansString
 
     }

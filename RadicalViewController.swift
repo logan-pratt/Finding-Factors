@@ -24,7 +24,8 @@ class RadicalViewController: UIViewController {
     }
     
     @IBAction func simplify(sender: UIButton) {
-        var num = numField.text.toInt()
+        self.view.endEditing(true)
+        let num = Int(numField.text!)
         var sRoots = [Int]()
         var firstNum: Int, secondNum: Int
         var ansString = ""
@@ -39,16 +40,20 @@ class RadicalViewController: UIViewController {
                     }
                 }
             }
-        firstNum = (Int)(sqrt(Double(sRoots.last!)))
-        secondNum = num! / sRoots.last!
-        ansString = "Simplified: \(firstNum)√\(secondNum)"
+            firstNum = (Int)(sqrt(Double(sRoots.last!)))
+            if (firstNum == 1) {
+                ansString = "Cannot be simplified"
+            } else {
+                secondNum = num! / sRoots.last!
+                ansString = "Simplified: \(firstNum)√\(secondNum)"
+            }
         }
         
         
         ansLabel.text = ansString
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //Dissmisses keyboard if touched outside
         self.view.endEditing(true)
     }
