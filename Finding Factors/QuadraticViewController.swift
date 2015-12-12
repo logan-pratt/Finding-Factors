@@ -21,10 +21,14 @@ class QuadraticViewController: UIViewController {
     @IBOutlet weak var thirdField: UITextField!
     @IBOutlet weak var factorLabel: UILabel!
     @IBOutlet weak var solutionLabel: UILabel!
+    @IBOutlet weak var solveButton: UIButton!
+    
+    var textFields: Array<UITextField>!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        textFields = [firstField, secondField, thirdField]
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,43 +73,62 @@ class QuadraticViewController: UIViewController {
     
     @IBAction func solveQuadratic(sender: UIButton) {
         self.view.endEditing(true)
-        let a = posNeg(Double(Int(firstField.text!)!), firstPlus, firstMinus)
-        let b = posNeg(Double(Int(secondField.text!)!), secondPlus, secondMinus)
-        let c = posNeg(Double(Int(thirdField.text!)!), thirdPlus, thirdMinus)
-        let d = b*b - (4*a*c)
-        var factor1 = 0.0, factor2 = 0.0
-        var factorString = "Factored: ", solutionString = "Solution(s): x={"
         
-        if (d>=0) {
-            factor1 = ((-b + sqrt(d)) / (2*a)).roundToPlaces(2)
-            factor2 = ((-b - sqrt(d)) / (2*a)).roundToPlaces(2)
+        if allFieldsFull() {
+            let a = posNeg(Double(Int(firstField.text!)!), firstPlus, firstMinus)
+            let b = posNeg(Double(Int(secondField.text!)!), secondPlus, secondMinus)
+            let c = posNeg(Double(Int(thirdField.text!)!), thirdPlus, thirdMinus)
+            let d = b*b - (4*a*c)
+            var factor1 = 0.0, factor2 = 0.0
+            var factorString = "Factored: ", solutionString = "Solutions: x = {"
             
-            
-            if (factor1>=0) {
-                factorString += "(x - \(factor1))"
+            if (d>=0) {
+                factor1 = ((-b + sqrt(d)) / (2*a)).roundToPlaces(3)
+                factor2 = ((-b - sqrt(d)) / (2*a)).roundToPlaces(3)
+                
+                
+                if (factor1>=0) {
+                    factorString += "(x - \(factor1.noZeros()))"
+                } else {
+                    factorString += "(x + \((factor1 * -1).noZeros()))"
+                }
+                
+                
+                if (factor2>=0) {
+                    factorString += " (x - \(factor2.noZeros()))"
+                } else {
+                    factorString += " (x + \((factor2 * -1).noZeros()))"
+                }
+                
+                solutionString += "\(factor1.noZeros()), \(factor2.noZeros())}"
             } else {
-                factorString += "(x + \(factor1 * -1))"
+                factorString=""
+                solutionString = "Solution: x = (\((-b).noZeros()) ± i√(\((-d).noZeros()))) / \((2*a).noZeros())"
             }
             
-            
-            if (factor2>=0) {
-                factorString += " (x - \(factor2))"
-            } else {
-                factorString += " (x + \(factor2 * -1))"
-            }
+            factorLabel.text = factorString
+            solutionLabel.text = solutionString
         } else {
-            factorString=""
-            solutionString = "x = \(-b/2*a) ± √\(-d)i"
+            factorLabel.text = "Factored: "
+            solutionLabel.text = "Solutions: x = {"
         }
-        
-        factorLabel.text = factorString
-        solutionLabel.text = solutionString
+    }
+    
+    func allFieldsFull() -> Bool {
+        for textField in textFields {
+            textField.resignFirstResponder()
+            if textField.text?.characters.count == 0 {
+                return false
+            }
+        }
+        return true
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //Dissmisses keyboard if touched outside
         self.view.endEditing(true)
     }
+    
     /*
     // MARK: - Navigation
     
@@ -123,5 +146,9 @@ extension Double {
     func roundToPlaces(places:Int) -> Double {
         let divisor = pow(10.0, Double(places))
         return round(self * divisor) / divisor
+    }
+    
+    func noZeros() -> String {
+        return String(format:"%g", self)
     }
 }

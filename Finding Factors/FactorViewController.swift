@@ -23,6 +23,7 @@ extension Int {
 class FactorViewController: UIViewController {
     
     @IBOutlet weak var numField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +37,9 @@ class FactorViewController: UIViewController {
     
     @IBAction func findFactors(sender: UIButton) {
         let num = Int(numField.text!)
+        self.view.endEditing(true)
+        sender.enabled = false
+        
         var numPrime = true
         
         let errorAlert = UIAlertController(title: "Error", message: "The number that you entered is either too big and will take too long to factor or is not a number.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -52,51 +56,57 @@ class FactorViewController: UIViewController {
         if (num <= 3) {
             self.presentViewController(primeAlert, animated: true, completion: nil)
         } else {
-            for i in 2...(num!/2) {
-                if ((num! % i) == 0) {
-                    numPrime = false;
-                    factors.append(i)
-                    //var isPrimeFactor = true
-                    
-                    /*for l in 2..<Int(ceil(sqrt(Double(i)))) {
-                    if ((i%l) == 0) {
-                    isPrimeFactor = false;
+            activityIndicator.startAnimating()
+            backgroundThread(background: {
+                for i in 2...(num!/2) {
+                    if ((num! % i) == 0) {
+                        numPrime = false;
+                        factors.append(i)
+                        //var isPrimeFactor = true
+                        
+                        /*for l in 2..<Int(ceil(sqrt(Double(i)))) {
+                        if ((i%l) == 0) {
+                        isPrimeFactor = false;
+                        }//end if
+                        }//end for*/
+                        
+                        if (i.isPrime) {
+                            primes.append(i)
+                        }//end if
+                        
+                        if ((fmod(sqrt(Double(i)), 1)) == 0) {
+                            sRoots.append(i)
+                        }//end if
+                        
+                        if ((fmod(cbrt(Double(i)), 1)) == 0) {
+                            cRoots.append(i)
+                        }//end if
                     }//end if
-                    }//end for*/
-                    
-                    if (i.isPrime) {
-                        primes.append(i)
-                    }//end if
-                    
-                    if ((fmod(sqrt(Double(i)), 1)) == 0) {
-                        sRoots.append(i)
-                    }//end if
-                    
-                    if ((fmod(cbrt(Double(i)), 1)) == 0) {
-                        cRoots.append(i)
-                    }//end if
-                }//end if
-            }//end for
-            if (numPrime == true) {
-                self.presentViewController(primeAlert, animated: true, completion: nil)
-            } else {
-                //Checks if num is an Int or is too big
-                if (num != nil) {
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    let ansViewController = storyBoard.instantiateViewControllerWithIdentifier("ansView") as! AnsViewController
-                    //Transfers variables to ansViewController
-                    ansViewController.num = Int(num!)
-                    ansViewController.factors = factors
-                    ansViewController.primes = primes
-                    ansViewController.sRoots = sRoots
-                    ansViewController.cRoots = cRoots
-                    //Switches to ansViewController
-                    self.presentViewController(ansViewController, animated:true, completion:nil)
-                } else {
-                    //Displays errorAlert
-                    self.presentViewController(errorAlert, animated: true, completion: nil)
-                }//end notNum check
-            }//end primeNum check
+                }//end for
+                }, completion: {
+                    self.activityIndicator.stopAnimating()
+                    sender.enabled = true
+                    if (numPrime == true) {
+                        self.presentViewController(primeAlert, animated: true, completion: nil)
+                    } else {
+                        //Checks if num is an Int or is too big
+                        if (num != nil) {
+                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                            let ansViewController = storyBoard.instantiateViewControllerWithIdentifier("ansView") as! AnsViewController
+                            //Transfers variables to ansViewController
+                            ansViewController.num = Int(num!)
+                            ansViewController.factors = factors
+                            ansViewController.primes = primes
+                            ansViewController.sRoots = sRoots
+                            ansViewController.cRoots = cRoots
+                            //Switches to ansViewController
+                            self.presentViewController(ansViewController, animated:true, completion:nil)
+                        } else {
+                            //Displays errorAlert
+                            self.presentViewController(errorAlert, animated: true, completion: nil)
+                        }//end notNum check
+                    }//end primeNum check
+            })
         }
     }//end findFactors
     

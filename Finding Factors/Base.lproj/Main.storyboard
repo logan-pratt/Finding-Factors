@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Quadratics-->
@@ -45,7 +46,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zar-Jn-rsc">
                                 <rect key="frame" x="308" y="286" width="50" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="308" y="292" width="50" height="30"/>
@@ -56,7 +57,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Btu-Xk-QOa">
                                 <rect key="frame" x="393" y="286" width="50" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="393" y="292" width="50" height="30"/>
@@ -67,7 +68,7 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2N-1X-4DQ">
                                 <rect key="frame" x="250" y="281" width="18" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -79,7 +80,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9k-xH-yDa">
                                 <rect key="frame" x="108" y="272" width="18" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -88,7 +89,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uix-9e-7xf">
                                 <rect key="frame" x="269" y="281" width="13" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -100,7 +101,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mA-b4-paM">
                                 <rect key="frame" x="280" y="272" width="27" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -112,7 +113,7 @@
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYt-Vg-31O">
                                 <rect key="frame" x="283" y="275" width="17" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -139,7 +140,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5S-DN-nhz">
                                 <rect key="frame" x="370" y="272" width="27" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -151,7 +152,7 @@
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAI-iW-hmz">
                                 <rect key="frame" x="373" y="275" width="17" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -178,7 +179,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODg-FC-ouR">
                                 <rect key="frame" x="162" y="272" width="27" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -190,7 +191,7 @@
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tL-sc-A3h">
                                 <rect key="frame" x="165" y="275" width="17" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -217,7 +218,7 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="239" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0t-12-lL4">
                                 <rect key="frame" x="190" y="285" width="50" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="190" y="291" width="50" height="30"/>
@@ -228,16 +229,16 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Factored:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gK-3e-cew">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="23" y="438" width="361" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solution(s):" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0L-ML-q7D">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solution(s):" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0L-ML-q7D">
+                                <rect key="frame" x="0.0" y="-20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -246,7 +247,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S93-gJ-myG">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                                 <state key="normal" title="Solve">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -292,6 +293,7 @@
                         <outlet property="secondMinus" destination="rYt-Vg-31O" id="Q0E-3b-uWv"/>
                         <outlet property="secondPlus" destination="7mA-b4-paM" id="6AS-8d-Tkl"/>
                         <outlet property="solutionLabel" destination="S0L-ML-q7D" id="iL9-aW-nyf"/>
+                        <outlet property="solveButton" destination="S93-gJ-myG" id="RqX-hE-SJe"/>
                         <outlet property="thirdField" destination="Btu-Xk-QOa" id="lu9-xC-YIZ"/>
                         <outlet property="thirdMinus" destination="IAI-iW-hmz" id="e0f-ZH-6u1"/>
                         <outlet property="thirdPlus" destination="W5S-DN-nhz" id="GeG-yf-cwZ"/>
@@ -330,15 +332,15 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="ER1-rw-bVf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="162" y="312" width="75" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwx-jv-yrU">
-                                <rect key="frame" x="257" y="325" width="88" height="88"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <rect key="frame" x="257" y="325" width="88" height="94"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                                 <state key="normal" title="Simplify">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -350,47 +352,57 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Radical Simplifier" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-TJ-hm9">
-                                <rect key="frame" x="161" y="60" width="279" height="50"/>
+                                <rect key="frame" x="161" y="70" width="279" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="52" y="20" width="269" height="102"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simplified:                         " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvh-MI-rnV">
-                                <rect key="frame" x="155" y="445" width="293" height="35"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simplified:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvh-MI-rnV">
+                                <rect key="frame" x="30" y="451" width="116" height="29"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="52" y="500" width="269" height="160"/>
                                 </variation>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Fg6-1R-v5K">
+                                <rect key="frame" x="163" y="456" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="VcT-TJ-hm9" secondAttribute="centerX" id="89L-nh-yE3"/>
                             <constraint firstItem="w3r-YF-v3k" firstAttribute="top" relation="lessThanOrEqual" secondItem="dvh-MI-rnV" secondAttribute="bottom" constant="71" id="9eu-Qx-sXs"/>
+                            <constraint firstItem="w3r-YF-v3k" firstAttribute="top" secondItem="Fg6-1R-v5K" secondAttribute="bottom" constant="75" id="DcO-em-Yeh"/>
                             <constraint firstAttribute="centerX" secondItem="Jwx-jv-yrU" secondAttribute="centerX" constant="-1" id="Ftt-2u-YCR"/>
+                            <constraint firstItem="dvh-MI-rnV" firstAttribute="leading" secondItem="Fg6-1R-v5K" secondAttribute="trailing" constant="-153" id="Huj-65-ZcQ"/>
                             <constraint firstAttribute="centerX" secondItem="dvh-MI-rnV" secondAttribute="centerX" constant="-1" id="JdY-vH-ZHC"/>
+                            <constraint firstItem="Fg6-1R-v5K" firstAttribute="leading" secondItem="dvh-MI-rnV" secondAttribute="trailing" constant="17" id="Jjc-LZ-MjG"/>
                             <constraint firstAttribute="centerY" secondItem="htE-YS-JC3" secondAttribute="centerY" constant="25" id="LXE-76-OTH"/>
                             <constraint firstItem="Wma-ae-CU7" firstAttribute="leading" secondItem="htE-YS-JC3" secondAttribute="trailing" constant="5" id="PMW-gQ-SbU"/>
                             <constraint firstItem="Wma-ae-CU7" firstAttribute="leading" secondItem="htE-YS-JC3" secondAttribute="trailing" constant="5" id="Qzn-L2-irb"/>
                             <constraint firstAttribute="centerX" secondItem="Wma-ae-CU7" secondAttribute="centerX" id="SX7-kz-J0f"/>
-                            <constraint firstItem="VcT-TJ-hm9" firstAttribute="top" secondItem="Yha-5Z-Lgd" secondAttribute="bottom" constant="40" id="aXJ-dE-bNe"/>
+                            <constraint firstItem="VcT-TJ-hm9" firstAttribute="top" secondItem="Yha-5Z-Lgd" secondAttribute="bottom" constant="50" id="aXJ-dE-bNe"/>
                             <constraint firstItem="Jwx-jv-yrU" firstAttribute="top" secondItem="Wma-ae-CU7" secondAttribute="bottom" constant="35" id="fHv-bN-Nbz"/>
                             <constraint firstAttribute="centerY" secondItem="Wma-ae-CU7" secondAttribute="centerY" constant="25" id="pf2-4R-tr9"/>
                             <constraint firstItem="dvh-MI-rnV" firstAttribute="top" secondItem="Jwx-jv-yrU" secondAttribute="bottom" constant="32" id="rUX-Px-Kdf"/>
+                            <constraint firstItem="dvh-MI-rnV" firstAttribute="left" secondItem="QS5-Rx-YEW" secondAttribute="leftMargin" constant="10" id="z83-aD-ufD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="PMW-gQ-SbU"/>
+                                <exclude reference="Huj-65-ZcQ"/>
+                                <exclude reference="JdY-vH-ZHC"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Radicals" image="first" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Fg6-1R-v5K" id="lsM-MZ-WPJ"/>
                         <outlet property="ansLabel" destination="dvh-MI-rnV" id="fmv-J4-j6R"/>
                         <outlet property="numField" destination="Wma-ae-CU7" id="dFD-Vh-wfd"/>
                     </connections>
@@ -412,7 +424,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ka-qF-Yyh">
-                                <rect key="frame" x="265" y="390" width="70" height="42"/>
+                                <rect key="frame" x="265" y="340" width="70" height="92"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Factor">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -473,19 +485,24 @@
                                     <rect key="frame" x="93" y="146" width="215" height="42"/>
                                 </variation>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Y0R-Uz-V3i">
+                                <rect key="frame" x="290" y="417" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="ucv-Cw-ZYI" secondAttribute="centerY" id="0Ju-CC-myj"/>
                             <constraint firstItem="GKR-R2-fZv" firstAttribute="top" secondItem="Nj8-YM-bPx" secondAttribute="bottom" constant="62" id="4dr-96-746"/>
                             <constraint firstItem="Nj8-YM-bPx" firstAttribute="top" secondItem="kHf-a8-Dck" secondAttribute="bottom" constant="50" id="5Iq-a4-rw6"/>
+                            <constraint firstItem="Y0R-Uz-V3i" firstAttribute="top" secondItem="1ka-qF-Yyh" secondAttribute="bottom" constant="-15" id="7E2-IA-sRJ"/>
                             <constraint firstAttribute="centerX" secondItem="ucv-Cw-ZYI" secondAttribute="centerX" id="C5z-qG-n4o"/>
                             <constraint firstAttribute="centerX" secondItem="1ka-qF-Yyh" secondAttribute="centerX" id="DSI-Di-gfU"/>
                             <constraint firstAttribute="centerX" secondItem="Nj8-YM-bPx" secondAttribute="centerX" id="JMb-5d-oAX"/>
                             <constraint firstItem="GKR-R2-fZv" firstAttribute="centerX" secondItem="ucv-Cw-ZYI" secondAttribute="centerX" id="P9C-Xl-CRm"/>
                             <constraint firstItem="ucv-Cw-ZYI" firstAttribute="top" relation="lessThanOrEqual" secondItem="GKR-R2-fZv" secondAttribute="bottom" constant="93" id="c2a-98-phd"/>
+                            <constraint firstItem="Y0R-Uz-V3i" firstAttribute="centerX" secondItem="vnC-WG-6VG" secondAttribute="centerX" id="ht6-pt-dgh"/>
                             <constraint firstItem="Rt0-kL-4ji" firstAttribute="top" relation="lessThanOrEqual" secondItem="1ka-qF-Yyh" secondAttribute="bottom" constant="119" id="nk6-60-HMo"/>
-                            <constraint firstItem="1ka-qF-Yyh" firstAttribute="top" secondItem="ucv-Cw-ZYI" secondAttribute="bottom" constant="75" id="yaU-hS-b6P"/>
+                            <constraint firstItem="1ka-qF-Yyh" firstAttribute="top" secondItem="ucv-Cw-ZYI" secondAttribute="bottom" constant="25" id="yaU-hS-b6P"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -500,6 +517,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Factors" image="first" id="RD3-o5-Omf"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Y0R-Uz-V3i" id="vHv-Zv-fq8"/>
                         <outlet property="numField" destination="ucv-Cw-ZYI" id="Xaj-kX-hQS"/>
                     </connections>
                 </viewController>
@@ -538,7 +556,7 @@
                                     <rect key="frame" x="0.0" y="17" width="640" height="44"/>
                                 </variation>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="II1-bt-BPR">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="II1-bt-BPR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
