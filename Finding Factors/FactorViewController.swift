@@ -38,25 +38,25 @@ class FactorViewController: UIViewController {
     @IBAction func findFactors(sender: UIButton) {
         let num = Int(numField.text!)
         self.view.endEditing(true)
-        sender.enabled = false
-        
         var numPrime = true
-        
-        let errorAlert = UIAlertController(title: "Error", message: "The number that you entered is either too big and will take too long to factor or is not a number.", preferredStyle: UIAlertControllerStyle.Alert)
-        errorAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
-        
-        let primeAlert = UIAlertController(title: "Prime Number", message: "\(num!) is a prime number.", preferredStyle: UIAlertControllerStyle.Alert)
-        primeAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
-        
         var primes = [Int]()
         var sRoots = [Int]()
         var cRoots = [Int]()
         var factors = [Int]()
         
-        if (num <= 3) {
+        if (num < 0) {
+            let negativeAlert = UIAlertController(title: "Negative Number", message: "Please enter a positive number.", preferredStyle: UIAlertControllerStyle.Alert)
+            negativeAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(negativeAlert, animated: true, completion: nil)
+        } else if (num <= 3) {
+            let primeAlert = UIAlertController(title: "Prime Number", message: "\(num!) is a prime number.", preferredStyle: UIAlertControllerStyle.Alert)
+            primeAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            
             self.presentViewController(primeAlert, animated: true, completion: nil)
         } else {
             activityIndicator.startAnimating()
+            sender.enabled = false
             backgroundThread(background: {
                 for i in 2...(num!/2) {
                     if ((num! % i) == 0) {
@@ -87,6 +87,8 @@ class FactorViewController: UIViewController {
                     self.activityIndicator.stopAnimating()
                     sender.enabled = true
                     if (numPrime == true) {
+                        let primeAlert = UIAlertController(title: "Prime Number", message: "\(num!) is a prime number.", preferredStyle: UIAlertControllerStyle.Alert)
+                        primeAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
                         self.presentViewController(primeAlert, animated: true, completion: nil)
                     } else {
                         //Checks if num is an Int or is too big
@@ -103,6 +105,8 @@ class FactorViewController: UIViewController {
                             self.presentViewController(ansViewController, animated:true, completion:nil)
                         } else {
                             //Displays errorAlert
+                            let errorAlert = UIAlertController(title: "Error", message: "Please enter a number.", preferredStyle: UIAlertControllerStyle.Alert)
+                            errorAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
                             self.presentViewController(errorAlert, animated: true, completion: nil)
                         }//end notNum check
                     }//end primeNum check

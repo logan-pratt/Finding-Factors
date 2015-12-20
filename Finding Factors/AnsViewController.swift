@@ -22,9 +22,16 @@ class AnsViewController: UIViewController {
         // Do any additional setup after loading the view.
         let ansString = "The factors of \(num) are:\n\(factors)\n\nThe square root factors are:\n\(sRoots)\n\nThe cube root factors are:\n\(cRoots)"
         ansLabel.text = ansString
-
+        
+        ansLabel.scrollEnabled = false;
+        ansLabel.scrollEnabled = true;
+        
     }
 
+    override func viewDidLayoutSubviews() {
+        ansLabel.setContentOffset(CGPointZero, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
